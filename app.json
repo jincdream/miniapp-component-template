@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/index/demo"
+    "demo/index/index"
   ],
   "window": {
     "enableWK": "YES",
     "enableDSL": "YES",
     "enableJSC": "YES",
-    "defaultTitle": "小程序动态表单",
+    "defaultTitle": "小程序组件模板",
     "backgroundColor": "#F5F5F9",
     "pullRefresh": false,
     "allowsBounceVertical": true
