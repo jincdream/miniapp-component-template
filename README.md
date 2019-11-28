@@ -27,5 +27,19 @@ npm run pub
 将在根目录生成 **dist** 文件夹
 
 
+### 安装使用
+
+```
+npm i miniapp-component-template -S
+```
+
+```json
+{
+  "usingComponents": {
+    "my-component": "miniapp-component-template/dist/myComponent/myComponent"
+  }
+}
+```
+
 > 鸣谢：支付宝小程序组件库
 > https://github.com/ant-mini-program/mini-antui
