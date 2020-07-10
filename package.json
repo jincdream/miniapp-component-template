@@ -1,16 +1,24 @@
 {
-  "name": "miniapp-component-template",
+  "name": "miniapp-form-test",
   "version": "0.0.1",
-  "description": "小程序组件模板",
+  "description": "小程序组件",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jincdream/miniapp-component-template.git"
+    "url": "git+https://github.com/alibaba/formily.git"
   },
+  "bugs": {
+    "url": "https://github.com/alibaba/formily/issues"
+  },
+  "homepage": "https://github.com/alibaba/formily#readme",
   "files": [
-    "dist"
+    "component",
+    "Core"
   ],
   "keywords": [
     "template",
+    "mini-app",
+    "formily",
+    "miniapp-aplipay",
     "mini-program",
     "component",
     "typescript"
@@ -19,16 +27,15 @@
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/plugin-transform-typescript": "^7.9.6",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-typescript": "^7.1.0",
-    "eslint": "^5.16.0",
-    "eslint-config-ali": "^3.1.0",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-typescript": "^0.14.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-if": "^2.0.2",
+    "gulp-inject-envs": "^1.1.1",
     "gulp-less": "^4.0.1",
     "gulp-rename": "^1.2.3",
     "lint-staged": "^8.2.0",
@@ -36,6 +43,7 @@
     "pre-commit": "^1.2.2",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.2.0",
+    "tslib": "^1.11.1",
     "typescript": "^3.2.4",
     "typescript-eslint-parser": "^22.0.0"
   },
@@ -43,22 +51,13 @@
     "lint-staged": "lint-staged",
     "build": "yarn && NODE_ENV=production node scripts/compiler.js",
     "pub": "npm run build && node scripts/pub.js",
-    "dev": "yarn && node scripts/compiler.js"
+    "dev": "yarn && node scripts/compiler.js",
+    "lo": "node scripts/compiler.js"
   },
   "pre-commit": [
     "lint-staged"
   ],
-  "lint-staged": {
-    "*.ts": [
-      "eslint --ext .ts",
-      "git add"
-    ],
-    "*.js": [
-      "eslint",
-      "git add"
-    ],
-    "*.less": [
-      "stylelint --syntax less"
-    ]
+  "lint-staged": {},
+  "dependencies": {
   }
 }
